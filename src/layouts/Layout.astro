@@ -4,47 +4,34 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import '@fontsource/roboto';
+import '@fontsource-variable/rubik';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="TODO" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="font-sans bg-white">
+		<slot /> <!-- Esto permitirá que el contenido del layout se muestre -->
 	</body>
 </html>
+
 <style is:global>
+	/* Aplica la fuente sans (Rubik Variable) de forma global */
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--font-sans: 'Rubik Variable', sans-serif;
+		--font-serif: 'Roboto', serif;
 	}
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+		font-family: var(--font-sans);
+		background-color: #ffffff;
 	}
 </style>
