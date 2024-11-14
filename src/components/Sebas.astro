@@ -1,0 +1,31 @@
+---
+// src/components/Sebas.astro
+
+const images = {
+  cerveza: "/Cerveza.webp",
+  cafe: "/Cafe.webp"
+};
+---
+
+<section style="display: flex; align-items: center; justify-content: center; background-color: #e0e0e0; padding: 40px;">
+  <div style="max-width: 640px; margin-right: 20px;">
+    <h1 style="font-size: 2em; font-weight: 700; color: #333; margin-bottom: 20px;">Nosotros</h1>
+    <p style="font-size: 1em; line-height: 1.8; color: #333; margin-bottom: 15px;">
+      Nuestra marca surgió con la idea de satisfacer la demanda de personas que visitan el valle de Oxapampa/Pozuzo y que no encuentran productos oriundos de dicho valle en otros lugares de nuestro país.
+    </p>
+    <p style="font-size: 1em; line-height: 1.8; color: #333; margin-bottom: 15px;">
+      Fue así que en el año 2023 nos adentramos en un fascinante viaje donde pudimos por experiencia propia conocer la historia de los lugareños y de cómo generan sus productos artesanales, los cuales tienen procesos bien definidos y certificados con altos estándares de calidad.
+    </p>
+    <p style="font-size: 1em; line-height: 1.8; color: #333; margin-bottom: 15px;">
+      Todo esto, combinando las tradiciones y los secretos mejor guardados de los colonos austro alemanes con los productos que nos brinda nuestra maravillosa Amazonía. Es aquí donde nace el nombre <strong>Colono Market</strong>, un lugar que nos transporta a esta parte de la selva y nos hace disfrutar de estos exquisitos productos.
+    </p>
+    <button style="background-color: #f68c34; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">
+      Escríbenos
+    </button>
+  </div>
+
+  <div style="position: relative; width: 640px; height: 576px; display: flex; align-items: center; justify-content: center;">
+    <img src={images.cerveza} alt="Cerveza" style="width: 450px; height: 450px; border-radius: 50%; position: relative; z-index: 1; border: 12px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" />
+    <img src={images.cafe} alt="Café" style="width: 250px; height: 250px; border-radius: 50%; position: absolute; bottom: -30px; left: 80px; z-index: 2; border: 12px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" />
+  </div>
+</section>

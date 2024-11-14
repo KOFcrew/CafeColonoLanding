@@ -1,0 +1,35 @@
+---
+// src/components/MisionVisionObjetivo.astro
+
+const icons = {
+  mision: "/Mision icon.jpg",
+  vision: "/Vision icon.jpg",
+  objetivo: "/Objetivo icon.jpg"
+};
+---
+
+<section style="display: flex; gap: 20px; justify-content: center; background-color: #e0e0e0; padding: 40px;">
+  <div style="background-color: #fff; padding: 30px 20px; border-radius: 8px; width: 420px; height: 420px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src={icons.mision} alt="Misión Icon" style="width: 50px; height: 50px; margin-bottom: 10px;" />
+    <h3 style="font-size: 1.5em; font-weight: 600; color: #333; margin: 5px 0;">Misión</h3>
+    <p style="font-size: 16px; line-height: 1.5; color: #333; font-family: 'Rubik', sans-serif; padding: 0 15px;">
+      Brindar a nuestros clientes productos del valle de Oxapampa/Pozuzo, garantizando los más altos estándares de calidad, eficiencia y competitividad, creando valor y satisfacción en los lugares donde operamos.
+    </p>
+  </div>
+
+  <div style="background-color: #fff; padding: 30px 20px; border-radius: 8px; width: 420px; height: 420px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src={icons.vision} alt="Visión Icon" style="width: 50px; height: 50px; margin-bottom: 10px;" />
+    <h3 style="font-size: 1.5em; font-weight: 600; color: #333; margin: 5px 0;">Visión</h3>
+    <p style="font-size: 16px; line-height: 1.5; color: #333; font-family: 'Rubik', sans-serif; padding: 0 15px;">
+      Ser la marca preferida en los diferentes productos del valle de Oxapampa/Pozuzo, siendo esta la preferida en cervezas artesanales y productos con compromiso en la calidad y responsabilidad del medio ambiente para un mundo mejor.
+    </p>
+  </div>
+
+  <div style="background-color: #fff; padding: 30px 20px; border-radius: 8px; width: 420px; height: 420px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src={icons.objetivo} alt="Objetivo Icon" style="width: 50px; height: 50px; margin-bottom: 10px;" />
+    <h3 style="font-size: 1.5em; font-weight: 600; color: #333; margin: 5px 0;">Objetivo</h3>
+    <p style="font-size: 16px; line-height: 1.5; color: #333; font-family: 'Rubik', sans-serif; padding: 0 15px;">
+      Satisfacer demanda no cubierta de personas que solicitan productos artesanales del valle de Pozuzo. Crear audiencia y hacer conocida la marca a través de diferentes medios de publicidad, logrando la fidelización del cliente y aumentando las ventas.
+    </p>
+  </div>
+</section>
