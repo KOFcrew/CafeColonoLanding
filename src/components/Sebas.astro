@@ -8,7 +8,8 @@ const images = {
 ---
 
 <section style="display: flex; align-items: center; justify-content: center; background-color: #e0e0e0; padding: 40px;">
-  <div style="max-width: 640px; margin-right: 20px;">
+  <!-- Aplicar fadeInLeft a "Nosotros" -->
+  <div class="animate__animated animate__fadeInLeft" style="max-width: 640px; margin-right: 20px;">
     <h1 style="font-size: 2em; font-weight: 700; color: #333; margin-bottom: 20px;">Nosotros</h1>
     <p style="font-size: 1em; line-height: 1.8; color: #333; margin-bottom: 15px;">
       Nuestra marca surgió con la idea de satisfacer la demanda de personas que visitan el valle de Oxapampa/Pozuzo y que no encuentran productos oriundos de dicho valle en otros lugares de nuestro país.
@@ -24,8 +25,11 @@ const images = {
     </button>
   </div>
 
-  <div style="position: relative; width: 640px; height: 576px; display: flex; align-items: center; justify-content: center;">
+  <!-- Aplicar zoomIn a la imagen de Cerveza -->
+  <div class="animate__animated animate__zoomIn" style="position: relative; width: 640px; height: 576px; display: flex; align-items: center; justify-content: center;">
     <img src={images.cerveza} alt="Cerveza" style="width: 450px; height: 450px; border-radius: 50%; position: relative; z-index: 1; border: 12px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" />
-    <img src={images.cafe} alt="Café" style="width: 250px; height: 250px; border-radius: 50%; position: absolute; bottom: -30px; left: 80px; z-index: 2; border: 12px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" />
+    
+    <!-- Aplicar rotateInUpRight a la imagen de Café -->
+    <img class="animate__animated animate__rotateInUpRight" src={images.cafe} alt="Café" style="width: 250px; height: 250px; border-radius: 50%; position: absolute; bottom: -30px; left: 80px; z-index: 2; border: 12px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" />
   </div>
 </section>
