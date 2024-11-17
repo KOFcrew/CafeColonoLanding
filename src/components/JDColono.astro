@@ -5,7 +5,7 @@ import Cards from "./Cards.astro";
 <!-- Contenedor principal de la sección -->
         <div class="section-background flex flex-col  items-center justify-center w-screen  
         mt-10 h-[725px] border-2 border-black">
-<section class="title-container flex flex-col items-center">
+<section class="title-container animated-title flex flex-col items-center">
   <p class="subtitle ">Market</p>
   <h2 class="title text-5xl ">Conoce nuestros productos</h2>
 </section>
@@ -17,7 +17,7 @@ subtitle="Café el Colono"
 description="Del valle de Oxapampa y Huancabamba, con la selección de los mejores granos cultivados les traemos el Café Premium 'El Colono'."
 imageSrc="card1img.svg"
 logoSrc="card1logo.svg"
-link="/siguiente seccion"
+link="#joffrecolono"
 />
 
 <!-- Tarjeta de Cerveza Artesanal Schaus Bier -->
@@ -27,7 +27,7 @@ subtitle="Cerveza Artesanal Schaus Bier"
 description="Desde Pozuzo, con la receta Austriaca y Alemana llega a nosotros la cerveza Artesanal Schaus Bier, con sus diversos sabores."
 imageSrc="card2img.svg"
 logoSrc="card2logo.svg"
-link="/siguiente seccion"
+link="#leocolono"
 />
 </section>
 </div>
@@ -48,5 +48,31 @@ gap: 2rem; /* Espaciado entre las tarjetas */
 .title {
   font-family: var(--font-serif);
   color: #ffffff;
+}
+/* Animacion del titulo */
+@keyframes slideInBounce {
+  0% {
+    transform: translateX(100%); /* Empieza fuera de la pantalla a la derecha */
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0); /* Llega al centro */
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-10px); /* Primer rebote, menor intensidad */
+  }
+  80% {
+    transform: translateX(5px); /* Segundo rebote, aún menor intensidad */
+  }
+  100% {
+    transform: translateX(0); /* Termina en su posición final */
+  }
+}
+
+/* Aplicar la animación */
+.animated-title {
+  animation: slideInBounce 1s ease-out;
+  animation-delay: 0.5s;
 }
 </style>
