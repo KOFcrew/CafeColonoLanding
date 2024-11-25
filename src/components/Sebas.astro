@@ -1,6 +1,4 @@
 ---
-// src/components/Sebas.astro
-
 const images = {
   cerveza: "/Cerveza.webp",
   cafe: "/Cafe.webp"
@@ -33,3 +31,31 @@ const images = {
     <img class="animate__animated animate__rotateInUpRight" src={images.cafe} alt="Café" style="width: 250px; height: 250px; border-radius: 50%; position: absolute; bottom: -30px; left: 80px; z-index: 2; border: 12px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" />
   </div>
 </section>
+
+<style>
+  @media (max-width: 1024px) {
+    section {
+      flex-direction: column;
+      padding: 20px;
+    }
+    div {
+      max-width: 100%;
+      margin: 0;
+    }
+    h1 {
+      font-size: 1.5em; /* Adjust heading size */
+    }
+    p {
+      font-size: 0.9em; /* Adjust paragraph size */
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.2em; /* Smaller heading */
+    }
+    p {
+      font-size: 0.8em; /* Smaller paragraph */
+    }
+  }
+</style>
