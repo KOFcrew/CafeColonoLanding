@@ -2,29 +2,36 @@
 import "animate.css";
 ---
 
-<div class="flex justify-center items-center w-screen h-[764px] bg-slate-50">
-  <section class="w-[620px] h-[620px] p-12">
+<div
+  class="flex justify-center items-center w-screen h-full bg-slate-50 max-lg:flex-col"
+>
+  <section class="w-[620px] h-[620px] p-11 max-lg:w-full max-lg:h-full">
+    <!-- max-lg: breakpoints 1024px -->
     <h1
-      class="text-6xl mb-6 font-semibold animate__animated animate__fadeInLeftBig"
+      id="titulo"
+      class="text-6xl max-lg:text-4xl mb-6 font-semibold animate__animated animate__fadeInLeftBig"
     >
       Café El Colono
     </h1>
     <div class="mb-5 animate__animated animate__fadeInLeftBig">
-      <p class="mb-3 animate-slide-in-left">
+      <p class="mb-3 animate-slide-in-left font-normal">
         Del valle de Oxapampa y Huancabamba, con la selección de los mejores
         granos cultivados les traemos el Café Premium "El Colono".
       </p>
     </div>
 
     <div
-      class="h-[92px] flex animate__animated animate__bounceInRight"
+      class="h-[92px] flex animate__animated animate__bounceInRight mb-5"
       style="animation-delay: 480ms;"
     >
       <div class="pt-1 pr-5">
         <img class="w-[46px]" src="/icono_check.png" alt="" />
       </div>
       <div>
-        <h3 class="text-3xl font-semibold text-green-900 mt-1">
+        <h3
+          id="subtitulo"
+          class="text-3xl max-lg:text-xl font-medium text-green-900 mt-1"
+        >
           Sabor Original
         </h3>
         <p>
@@ -35,14 +42,19 @@ import "animate.css";
     </div>
 
     <div
-      class="h-[92px] flex animate__animated animate__bounceInRight"
+      class="h-[92px] flex animate__animated animate__bounceInRight mb-5"
       style="animation-delay: 600ms;"
     >
       <div class="pt-1 pr-5">
-        <img class="w-[46px]" src="/icono_check.png" alt="" />
+        <img class="w-[46px] max-lg:w-[46px]" src="/icono_check.png" alt="" />
       </div>
       <div>
-        <h3 class="text-3xl font-semibold text-green-900 mt-1">Café Premium</h3>
+        <h3
+          id="subtitulo"
+          class="text-3xl max-lg:text-xl font-medium text-green-900 mt-1"
+        >
+          Café Premium
+        </h3>
         <p>
           Usted está bebiendo un Café excepcional con los más finos y selectos
           granos del valle de Oxapampa.
@@ -55,10 +67,17 @@ import "animate.css";
       style="animation-delay: 840ms;"
     >
       <div class="pt-1 pr-5">
-        <img class="w-[30.36px]" src="/icono_check.png" alt="" />
+        <img
+          class="w-[30.36px] max-lg:w-[46px]"
+          src="/icono_check.png"
+          alt=""
+        />
       </div>
       <div>
-        <h3 class="text-3xl font-semibold text-green-900 mt-1">
+        <h3
+          id="subtitulo"
+          class="text-3xl max-lg:text-xl font-medium text-green-900 mt-1"
+        >
           100% Orgánico
         </h3>
         <p>Es un producto libre de componentes químicos y artificiales.</p>
@@ -66,7 +85,7 @@ import "animate.css";
     </div>
 
     <div
-      class="h-[92px] pt-12 flex w-[347px] animate__animated animate__fadeInLeftBig"
+      class="h-[70px] max-lg:h-[69px] pt-4 max-lg:pt-5 flex w-[347px] max-lg:w-[250px] animate__animated animate__fadeInLeftBig"
     >
       <a
         href="#"
@@ -92,7 +111,9 @@ import "animate.css";
     <img
       src="/imgColono.png"
       alt="Imagen del café"
-      class="w-[620px] p-1 animate__animated animate__zoomIn"
+      class="w-[620px] max-lg:w-[450px] max-lg:h-[450px] p-1 mb-10 max-md:w-[250px] max-md:h-[250px] transition-all animate__animated animate__zoomIn"
     />
+    <!-- max-md: breakpoints 768px -->
   </section>
 </div>
+
