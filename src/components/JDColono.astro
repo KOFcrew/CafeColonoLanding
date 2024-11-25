@@ -1,46 +1,50 @@
 ---
 import Cards from "./Cards.astro";
 ---
+<section class="section-background flex flex-col items-center justify-center w-full mt-10 h-auto border-black">
+  <!-- Título -->
+  <section class="title-container animated-title text-center">
+    <p class="subtitle text-xl md:text-2xl">Market</p>
+    <h2 class="title text-3xl md:text-5xl">Conoce nuestros productos</h2>
+  </section>
 
-<!-- Contenedor principal de la sección -->
-        <div class="section-background flex flex-col  items-center justify-center w-screen  
-        mt-10 h-[725px] border-2 border-black">
-<section class="title-container animated-title flex flex-col items-center">
-  <p class="subtitle ">Market</p>
-  <h2 class="title text-5xl ">Conoce nuestros productos</h2>
-</section>
-
-<section class="section-background flex flex-col md:flex-row">
-<Cards
-title=""
-subtitle="Café el Colono"
-description="Del valle de Oxapampa y Huancabamba, con la selección de los mejores granos cultivados les traemos el Café Premium 'El Colono'."
-imageSrc="card1img.svg"
-logoSrc="card1logo.svg"
-link="#joffrecolono"
-/>
-
-<!-- Tarjeta de Cerveza Artesanal Schaus Bier -->
-<Cards
-title=""
-subtitle="Cerveza Artesanal Schaus Bier"
-description="Desde Pozuzo, con la receta Austriaca y Alemana llega a nosotros la cerveza Artesanal Schaus Bier, con sus diversos sabores."
-imageSrc="card2img.svg"
-logoSrc="card2logo.svg"
-link="#leocolono"
-/>
-</section>
+  <!-- Contenedor de tarjetas -->
+  <section class="flex flex-col md:flex-row items-center justify-center w-full max-w-5xl mx-auto p-4 gap-8">
+    <!-- Tarjeta de Café -->
+    <Cards
+      title=""
+      subtitle="Café el Colono"
+      description="Del valle de Oxapampa y Huancabamba, con la selección de los mejores granos cultivados les traemos el Café Premium 'El Colono'."
+      imageSrc="card1img.svg"
+      logoSrc="card1logo.svg"
+      link="#joffrecolono"
+      class="w-full sm:max-w-full md:max-w-md" 
+    />
+    <!-- Tarjeta de Cerveza -->
+    <Cards
+      title=""
+      subtitle="Cerveza Artesanal Schaus Bier"
+      description="Desde Pozuzo, con la receta Austriaca y Alemana llega a nosotros la cerveza Artesanal Schaus Bier, con sus diversos sabores."
+      imageSrc="card2img.svg"
+      logoSrc="card2logo.svg"
+      link="#leocolono"
+      class="w-full sm:max-w-full md:max-w-md" 
+    />
+  </section>
+  
 </div>
-
 
 <style>
 .section-background {
-background-color: #3E3C3E; /* Color de fondo de la sección */
-padding: 2rem 0;
-display: flex;
-justify-content: center;
-gap: 2rem; /* Espaciado entre las tarjetas */
+  background-color: #3E3C3E;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
+
 .subtitle {
   font-family: var(--font-serif);
   color: #FF8730;
@@ -49,6 +53,7 @@ gap: 2rem; /* Espaciado entre las tarjetas */
   font-family: var(--font-serif);
   color: #ffffff;
 }
+
 /* Animacion del titulo */
 @keyframes slideInBounce {
   0% {
